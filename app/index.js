@@ -1,13 +1,15 @@
-import React, {Component} from 'react';
-import Router from './routes';
-import {AppRegistry} from 'react-native';
+import React, { Component } from "react";
+import Router from "./routes";
+import { AppRegistry, StatusBar } from "react-native";
 
 export default class CustomDrawer extends Component {
-  render () {
-    return (
-      <Router/>
-    );
+  componentDidMount() {
+    StatusBar.setHidden(true);
+  }
+
+  render() {
+    return <Router />;
   }
 }
 
-AppRegistry.registerComponent('CustomDrawer', () => CustomDrawer);
+AppRegistry.registerComponent("CustomDrawer", () => CustomDrawer);

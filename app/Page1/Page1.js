@@ -1,25 +1,20 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
-import React, {Component} from 'react';
-import {
-  Text,
-  View
-} from 'react-native';
+import React, { Component } from "react";
+import { Text, View, StyleSheet } from "react-native";
+import Header from "../Components/Header";
 
 class Page1 extends Component {
-  render () {
+  render() {
     return (
-      <View style={{padding: 50}}>
-        <Text>
-          Page1
-        </Text>
+      <View style={styles.pageContainer}>
+        <Header title={"Page1"} navigation={this.props.navigation}/>
+        <Text>Page1</Text>
       </View>
     );
   }
 }
 
 export default Page1;
+
+const styles = StyleSheet.create({
+  pageContainer: {}
+});

@@ -1,8 +1,7 @@
 import PropTypes from "prop-types";
 import React, { Component } from "react";
-import styles from "./SideMenu.style";
 import { NavigationActions } from "react-navigation";
-import { ScrollView, Text, View } from "react-native";
+import { ScrollView, Text, View, StyleSheet } from "react-native";
 
 class SideMenu extends Component {
   navigateToScreen = route => () => {
@@ -17,30 +16,52 @@ class SideMenu extends Component {
       <View style={styles.container}>
         <ScrollView>
           <View>
-            <Text style={styles.sectionHeadingStyle}>Section 1</Text>
+            <Text style={styles.sectionHeadingStyle}>Flat List</Text>
             <View style={styles.navSectionStyle}>
               <Text
                 style={styles.navItemStyle}
-                onPress={this.navigateToScreen("Page1")}
+                onPress={this.navigateToScreen("Example1")}
               >
-                Page1
+                Example1
+              </Text>
+            </View>
+            <View style={styles.navSectionStyle}>
+              <Text
+                style={styles.navItemStyle}
+                onPress={this.navigateToScreen("Example2")}
+              >
+                Example2
+              </Text>
+            </View>
+            <View style={styles.navSectionStyle}>
+              <Text
+                style={styles.navItemStyle}
+                onPress={this.navigateToScreen("Example3")}
+              >
+                Example3
               </Text>
             </View>
           </View>
           <View>
-            <Text style={styles.sectionHeadingStyle}>Section 2</Text>
+            <Text style={styles.sectionHeadingStyle}>Section List</Text>
             <View style={styles.navSectionStyle}>
               <Text
                 style={styles.navItemStyle}
-                onPress={this.navigateToScreen("Page2")}
+                onPress={this.navigateToScreen("Example4")}
               >
-                Page2
+                Example4
               </Text>
               <Text
                 style={styles.navItemStyle}
-                onPress={this.navigateToScreen("Page3")}
+                onPress={this.navigateToScreen("Example5")}
               >
-                Page3
+                Example5
+              </Text>
+              <Text
+                style={styles.navItemStyle}
+                onPress={this.navigateToScreen("Example6")}
+              >
+                Example6
               </Text>
             </View>
           </View>
@@ -58,3 +79,24 @@ SideMenu.propTypes = {
 };
 
 export default SideMenu;
+
+const styles = StyleSheet.create({
+  container: {
+    paddingTop: 20,
+    flex: 1
+  },
+  navItemStyle: {
+    padding: 10
+  },
+  navSectionStyle: {},
+  sectionHeadingStyle: {
+    paddingVertical: 10,
+    paddingHorizontal: 5,
+    color: "#FFF",
+    backgroundColor: "#D44744"
+  },
+  footerContainer: {
+    padding: 20,
+    backgroundColor: "lightgrey"
+  }
+});

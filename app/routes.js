@@ -1,19 +1,22 @@
-import Page1 from "./Page1/Page1";
-import Page2 from "./Page2/Page2";
-import Page3 from "./Page3/Page3";
+import Example1 from "./Pages/Example1";
+import Example2 from "./Pages/Example2";
+import Example3 from "./Pages/Example3";
+import Example4 from "./Pages/Example4";
+import Example5 from "./Pages/Example5";
+import Example6 from "./Pages/Example6";
 import SideMenu from "./SideMenu/SideMenu";
 import { DrawerNavigator } from "react-navigation";
 
 export default DrawerNavigator(
   {
-    Page1: {
-      screen: Page1
+    Example1: {
+      screen: Example1
     },
-    Page2: {
-      screen: Page2
+    Example2: {
+      screen: Example2
     },
-    Page3: {
-      screen: Page3
+    Example3: {
+      screen: Example3
     }
   },
   {

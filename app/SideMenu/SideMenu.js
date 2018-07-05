@@ -1,7 +1,13 @@
 import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { NavigationActions } from "react-navigation";
-import { ScrollView, Text, View, StyleSheet } from "react-native";
+import {
+  ScrollView,
+  Text,
+  View,
+  StyleSheet,
+  TouchableHighlight
+} from "react-native";
 
 class SideMenu extends Component {
   navigateToScreen = route => () => {
@@ -17,58 +23,58 @@ class SideMenu extends Component {
         <ScrollView>
           <View>
             <Text style={styles.sectionHeadingStyle}>Flat List</Text>
-            <View style={styles.navSectionStyle}>
-              <Text
-                style={styles.navItemStyle}
-                onPress={this.navigateToScreen("Example1")}
-              >
-                Example1
-              </Text>
-            </View>
-            <View style={styles.navSectionStyle}>
-              <Text
-                style={styles.navItemStyle}
-                onPress={this.navigateToScreen("Example2")}
-              >
-                Example2
-              </Text>
-            </View>
-            <View style={styles.navSectionStyle}>
-              <Text
-                style={styles.navItemStyle}
-                onPress={this.navigateToScreen("Example3")}
-              >
-                Example3
-              </Text>
-            </View>
+
+            <TouchableHighlight
+              style={styles.navItemStyle}
+              onPress={this.navigateToScreen("Example1")}
+              underlayColor={"#f4cfce"}
+            >
+              <Text>Example 1</Text>
+            </TouchableHighlight>
+
+            <TouchableHighlight
+              style={styles.navItemStyle}
+              onPress={this.navigateToScreen("Example2")}
+              underlayColor={"#f4cfce"}
+            >
+              <Text>Example 2</Text>
+            </TouchableHighlight>
+
+            <TouchableHighlight
+              style={styles.navItemStyle}
+              onPress={this.navigateToScreen("Example3")}
+              underlayColor={"#f4cfce"}
+            >
+              <Text>Example 3</Text>
+            </TouchableHighlight>
           </View>
           <View>
             <Text style={styles.sectionHeadingStyle}>Section List</Text>
             <View style={styles.navSectionStyle}>
-              <Text
+              <TouchableHighlight
                 style={styles.navItemStyle}
                 onPress={this.navigateToScreen("Example4")}
+                underlayColor={"#f4cfce"}
               >
-                Example4
-              </Text>
-              <Text
+                <Text>Example 4</Text>
+              </TouchableHighlight>
+              <TouchableHighlight
                 style={styles.navItemStyle}
                 onPress={this.navigateToScreen("Example5")}
+                underlayColor={"#f4cfce"}
               >
-                Example5
-              </Text>
-              <Text
+                <Text>Example 5</Text>
+              </TouchableHighlight>
+              <TouchableHighlight
                 style={styles.navItemStyle}
                 onPress={this.navigateToScreen("Example6")}
+                underlayColor={"#f4cfce"}
               >
-                Example6
-              </Text>
+                <Text>Example 6</Text>
+              </TouchableHighlight>
             </View>
           </View>
         </ScrollView>
-        <View style={styles.footerContainer}>
-          <Text>This is my fixed footer</Text>
-        </View>
       </View>
     );
   }
@@ -82,21 +88,16 @@ export default SideMenu;
 
 const styles = StyleSheet.create({
   container: {
-    paddingTop: 20,
     flex: 1
   },
   navItemStyle: {
     padding: 10
   },
-  navSectionStyle: {},
   sectionHeadingStyle: {
+    fontSize: 20,
     paddingVertical: 10,
     paddingHorizontal: 5,
     color: "#FFF",
     backgroundColor: "#D44744"
-  },
-  footerContainer: {
-    padding: 20,
-    backgroundColor: "lightgrey"
   }
 });

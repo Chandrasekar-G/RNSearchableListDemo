@@ -17,7 +17,17 @@ export default DrawerNavigator(
     },
     Example3: {
       screen: Example3
+    },
+    Example4: {
+      screen: Example4
+    },
+    Example5: {
+      screen: Example5
+    },
+    Example6: {
+      screen: Example6
     }
+
   },
   {
     contentComponent: SideMenu,

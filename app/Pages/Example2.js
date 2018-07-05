@@ -104,7 +104,9 @@ class Example1 extends Component {
             </View>
             <View style={styles.row1}>
               <Text style={styles.prop}>data</Text>
-              <ScrollView style={{height: 80}}><Text style={styles.val}>{JSON.stringify(data)}</Text></ScrollView>
+              <ScrollView style={{ height: 80 }}>
+                <Text style={styles.val}>{JSON.stringify(data)}</Text>
+              </ScrollView>
             </View>
             <View style={styles.row}>
               <Text style={styles.prop}>searchTerm</Text>
@@ -156,7 +158,7 @@ const styles = StyleSheet.create({
     padding: 10,
     marginTop: 20,
     borderColor: "#f4cfce",
-    borderWidth: 1,
+    borderWidth: 1
   },
   row: {
     flexDirection: "row",

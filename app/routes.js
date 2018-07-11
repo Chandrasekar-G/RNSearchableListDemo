@@ -9,8 +9,8 @@ import { DrawerNavigator } from "react-navigation";
 
 export default DrawerNavigator(
   {
-    Example1: {
-      screen: Example1
+    Example5: {
+      screen: Example5
     },
     Example2: {
       screen: Example2
@@ -21,8 +21,8 @@ export default DrawerNavigator(
     Example4: {
       screen: Example4
     },
-    Example5: {
-      screen: Example5
+    Example1: {
+      screen: Example1
     },
     Example6: {
       screen: Example6
